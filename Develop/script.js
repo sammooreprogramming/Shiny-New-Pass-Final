@@ -22,7 +22,13 @@ function writePassword() {
   var specialChoice = confirm("Would you like your password to contain special characters?");
   var passCharNum = prompt("Choose a password length of at least 8 characters and no more than 128 characters.");
 
-  
+  // if statement to specify parameters to the user.
+  if (passCharNum < 8 || passCharNum > 128) {
+    alert("The password is not between the parameteres 8 and 128. Please try again.");
+    var passCharNum = prompt("Choose a password length of at least 8 characters and no more than 128 characters.");
+
+}
+
   var password = generatePassword() ;
   var passwordText = document.querySelector("#password");
 
