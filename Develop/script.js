@@ -29,6 +29,16 @@ function writePassword() {
 
 }
 
+else if (lowerChoice === false && upperChoice === false && numChoice && specialChoice === false){
+  alert("You must select at least 1 option to generate a password.");
+  var lowerChoice = confirm("Would you like your password to contain lowercase characters?");
+  var upperChoice = confirm("Would you like your password to contain uppercase characters?");
+  var numChoice = confirm("Would you like your password to include numbers as characters?");
+  var specialChoice = confirm("Would you like your password to contain special characters?");
+};
+
+
+
   var password = generatePassword() ;
   var passwordText = document.querySelector("#password");
 
