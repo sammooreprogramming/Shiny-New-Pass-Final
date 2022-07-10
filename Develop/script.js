@@ -6,14 +6,12 @@ var generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", writePassword);
 
 //begin variable creation for later use
-var special = " !\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
-var lower = "abcdefghijklmnopqrstuvwxyz";
-var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var number = "0123456789";
-var blankVariable = "";
+var special = [" !\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"];
+var lower = ["abcdefghijklmnopqrstuvwxyz"];
+var upper = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+var number = ["0123456789"];
+var blankVariable = [];
 
-// Write password to the #password input
-function writePassword() {
 
   // design the password via prompts and user data entry fom the user.
   var lowerChoice = confirm("Would you like your password to contain lowercase characters?");
@@ -37,12 +35,28 @@ else if (lowerChoice === false && upperChoice === false && numChoice && specialC
   var specialChoice = confirm("Would you like your password to contain special characters?");
 };
 
-
-
-  var password = generatePassword() ;
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
+// if statements to specify parameters of the new password.
+if (upperChoice){
+  blankVariable = blankVariable.concat(upper);
 }
 
+if (lowerChoice){
+  blankVariable = blankVariable.concat(lower);
+}
+
+if (numChoice){
+  blankVariable = blankVariable.concat(upper);
+}
+
+if (specialChoice){
+  blankVariable = blankVariable.concat(upper);
+}
+
+
+// write password to the #password input
+function writePassword() {
+var password = generatePassword() ;
+var passwordText = document.querySelector("#password");
+
+passwordText.value = password;
+}
