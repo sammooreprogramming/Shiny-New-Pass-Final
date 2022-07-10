@@ -1,7 +1,7 @@
 // Assignment code here
 // Get references to the #generate element
 let generateBtn = document.querySelector("#generate");
-console.log(generateBtn);
+
 //begin variable creation for later use
 var special = " !\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
 var lower = "abcdefghijklmnopqrstuvwxyz";
