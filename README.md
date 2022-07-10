@@ -9,4 +9,9 @@ A working random password generator that functions correctly through a button an
 
 Here is the link to this application's live website on Github Pages:
 
-https://sammooreprogramming.github.io/Shiny-New-Pass-Finalized/
+https://sammooreprogramming.github.io/Shiny-New-Pass-Final/
+
+
+Here is a link to the github repository-
+
+https://github.com/sammooreprogramming/Shiny-New-Password-Final/settings/pages
